@@ -1,3 +1,3 @@
 source 'http://rubygems.org'
 gem 'gemspec'
-gem "logstash", :github => "elastic/logstash", :branch => "2.3"
+#gem "logstash", :github => "boazshor/logstash-input-Kafka-Then-S3", :branch => "0.1"
