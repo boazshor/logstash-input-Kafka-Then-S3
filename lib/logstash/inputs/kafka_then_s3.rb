@@ -1,7 +1,7 @@
 require 'logstash/namespace'
 require 'logstash/inputs/base'
 require 'jruby-kafka'
-require "logstash/plugin_mixins/aws_config"
+require 'logstash/plugin_mixins/aws_config'
 require "time"
 require "tmpdir"
 require "stud/interval"
@@ -360,7 +360,7 @@ class LogStash::Inputs::KafkaThenS3 < LogStash::Inputs::Base
     # Currently codecs operates on bytes instead of stream.
     # So all IO stuff: decompression, reading need to be done in the actual
     # input and send as bytes to the codecs.
-    read_file(filename) do |line|
+    read_file(filename) do |line, isEof|
       if stop?
         @logger.warn("Logstash S3 input, stop reading in the middle of the file, we will read it again when logstash is started")
         return false
@@ -382,7 +382,7 @@ class LogStash::Inputs::KafkaThenS3 < LogStash::Inputs::Base
           update_metadata(metadata, event)
         else
           decorate(event)
-
+          event["isEof"] = isEof
           event["context"] = origEvent['context']
           queue << event
         end
@@ -434,7 +434,7 @@ class LogStash::Inputs::KafkaThenS3 < LogStash::Inputs::Base
   def read_plain_file(filename, block)
 
     File.open(filename, 'rb') do |file|
-      file.each(&block)
+      {:line  =>file.each(&block), :isEof => file.eof}
     end
   end
 
@@ -570,7 +570,7 @@ class LogStash::Inputs::KafkaThenS3 < LogStash::Inputs::Base
       @secret_access_key = @credentials[1]
     end
 
-    s3 = AWS::S3.new(aws_options_hash)
+    s3 = AWS::S3.new()
   end
 
   private
