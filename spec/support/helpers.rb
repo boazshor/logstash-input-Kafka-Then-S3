@@ -1,17 +1,15 @@
-# def fetch_events(settings)
-#   queue = []
-#   s3 = LogStash::Inputs::KafkaThenS3.new(settings)
-#   s3.register
-#   #need to define event
-#   s3.process_files(event , queue)
-#   queue
-# end
+
 
 # delete_files(prefix)
 def upload_file(local_file, remote_name)
   bucket = s3object.buckets[ENV['AWS_LOGSTASH_TEST_BUCKET']]
+   printf "in uploadfile, the bucket is : " + bucket.name + " the local file is : "+local_file + " and the remote name is :  " + remote_name + "\n"
   file = File.expand_path(File.join(File.dirname(__FILE__), local_file))
-  bucket.objects[remote_name].write(:file => file)
+  splitFile = file.split('C:')
+  truePath = 'C:' + splitFile[1]
+   printf "the full filename is : " + truePath + "\n"
+  bucket.objects[remote_name].write(:file => truePath)
+
 end
 
 def delete_remote_files(prefix)
@@ -19,10 +17,10 @@ def delete_remote_files(prefix)
   bucket.objects.with_prefix(prefix).each { |object| object.delete }
 end
 
-def list_remote_files(prefix, target_bucket = ENV['AWS_LOGSTASH_TEST_BUCKET'])
-  bucket = s3object.buckets[target_bucket]
-  bucket.objects.with_prefix(prefix).collect(&:key)
-end
+# def list_remote_files(prefix, target_bucket = ENV['AWS_LOGSTASH_TEST_BUCKET'])
+#   bucket = s3object.buckets[target_bucket]
+#   bucket.objects.with_prefix(prefix).collect(&:key)
+# end
 
 def delete_bucket(name)
   s3object.buckets[name].objects.map(&:delete)

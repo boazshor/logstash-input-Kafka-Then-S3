@@ -5,8 +5,9 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/logstash-input-kafka-then-s3.iml" afterPath="$PROJECT_DIR$/.idea/logstash-input-kafka-then-s3.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/logstash/inputs/kafka_then_s3.rb" afterPath="$PROJECT_DIR$/lib/logstash/inputs/kafka_then_s3.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/inputs/kafka_then_s3_spec.rb" afterPath="$PROJECT_DIR$/spec/inputs/kafka_then_s3_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/spec_helper.rb" afterPath="$PROJECT_DIR$/spec/spec_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/support/helpers.rb" afterPath="$PROJECT_DIR$/spec/support/helpers.rb" />
     </list>
     <ignored path="logstash-input-kafka-then-s3.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -20,8 +21,10 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/logstash-input-kafka-then-s3@Run_spec__kafka_then_s3_spec___logstash_input_kafka_then_s3.coverage" NAME="Run spec 'kafka-then-s3_spec': logstash-input-kafka-then-s3 Coverage Results" MODIFIED="1461245715540" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="logstash-input-kafka-then-s3" />
+    <SUITE FILE_PATH="coverage/logstash-input-Kafka-Then-S3@LogStash__Inputs__TestKafkaThenS3_should_retrieve_event_from_kafka__logstash_input_kafka_then_s3.coverage" NAME="LogStash::Inputs::TestKafkaThenS3 should retrieve event from kafka: logstash-input-kafka-then-s3 Coverage Results" MODIFIED="1461752071999" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="logstash-input-kafka-then-s3" />
     <SUITE FILE_PATH="coverage/logstash-input-kafka-then-s3@LogStash__Inputs__TestKafkaThenS3_should_fail_without_topic_configs__logstash_input_kafka_then_s3.coverage" NAME="LogStash::Inputs::TestKafkaThenS3 should fail without topic configs: logstash-input-kafka-then-s3 Coverage Results" MODIFIED="1461171782683" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="logstash-input-kafka-then-s3" />
+    <SUITE FILE_PATH="coverage/logstash-input-Kafka-Then-S3@Run_spec__kafka_then_s3_spec___logstash_input_kafka_then_s3.coverage" NAME="Run spec 'kafka-then-s3_spec': logstash-input-kafka-then-s3 Coverage Results" MODIFIED="1461750678148" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="logstash-input-kafka-then-s3" />
+    <SUITE FILE_PATH="coverage/logstash-input-kafka-then-s3@Run_spec__kafka_then_s3_spec___logstash_input_kafka_then_s3.coverage" NAME="Run spec 'kafka-then-s3_spec': logstash-input-kafka-then-s3 Coverage Results" MODIFIED="1461245715540" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="logstash-input-kafka-then-s3" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -35,8 +38,8 @@
       <file leaf-file-name="kafka_then_s3_spec.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spec/inputs/kafka_then_s3_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="87" column="45" selection-start-line="87" selection-start-column="45" selection-end-line="87" selection-end-column="45" />
+            <state relative-caret-position="107">
+              <caret line="186" column="41" selection-start-line="186" selection-start-column="30" selection-end-line="186" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -45,28 +48,28 @@
       <file leaf-file-name="helpers.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spec/support/helpers.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+            <state relative-caret-position="51">
+              <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="s3_spec.rb" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/spec/integration/s3_spec.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.09385863">
-              <caret line="21" column="49" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="49" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="kafka_then_s3.rb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="kafka_then_s3.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/logstash/inputs/kafka_then_s3.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+            <state relative-caret-position="299">
+              <caret line="417" column="35" selection-start-line="417" selection-start-column="35" selection-end-line="417" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Rakefile" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Rakefile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -82,9 +85,11 @@
       <list>
         <option value="$PROJECT_DIR$/logstash-input-kafka_then_s3.gemspec" />
         <option value="$PROJECT_DIR$/spec/spec_helper.rb" />
+        <option value="$PROJECT_DIR$/spec/fixtures/simple_text.txt" />
         <option value="$PROJECT_DIR$/spec/integration/s3_spec.rb" />
         <option value="$PROJECT_DIR$/spec/support/helpers.rb" />
         <option value="$PROJECT_DIR$/spec/inputs/kafka_then_s3_spec.rb" />
+        <option value="$PROJECT_DIR$/lib/logstash/inputs/kafka_then_s3.rb" />
       </list>
     </option>
   </component>
@@ -96,8 +101,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1696" />
-    <option name="height" value="1026" />
+    <option name="width" value="1660" />
+    <option name="height" value="809" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -124,143 +129,18 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logstash-input-kafka-then-s3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logstash-input-kafka-then-s3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logstash-input-kafka-then-s3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logstash-input-kafka-then-s3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logstash-input-kafka-then-s3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spec" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logstash-input-kafka-then-s3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logstash-input-kafka-then-s3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spec" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="support" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logstash-input-kafka-then-s3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logstash-input-kafka-then-s3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spec" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="integration" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logstash-input-kafka-then-s3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logstash-input-kafka-then-s3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spec" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="inputs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logstash-input-kafka-then-s3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logstash-input-kafka-then-s3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spec" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fixtures" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logstash-input-kafka-then-s3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logstash-input-kafka-then-s3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logstash" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="inputs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane />
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="C:/Program Files/Git/bin/git.exe" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.ruby.settings.RubyActiveModuleSdkConfigurable" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
@@ -268,7 +148,7 @@
       <recent name="C:\Users\shorb\RubymineProjects\logstash-input-kafka-then-s3\spec" />
     </key>
   </component>
-  <component name="RunManager" selected="RSpec.Run spec 'kafka-then-s3_spec': logstash-input-kafka-then-s3">
+  <component name="RunManager" selected="RSpec.LogStash::Inputs::TestKafkaThenS3 should retrieve event from kafka: logstash-input-kafka-then-s3">
     <configuration default="false" name="LogStash::Inputs::TestKafkaThenS3 should populate kafka config with default values: logstash-input-kafka-then-s3" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
       <predefined_log_file id="RUBY_RSPEC" enabled="true" />
       <module name="logstash-input-kafka-then-s3" />
@@ -346,6 +226,35 @@
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="LogStash::Inputs::TestKafkaThenS3 should retrieve event from kafka: logstash-input-kafka-then-s3" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
+      <predefined_log_file id="RUBY_RSPEC" enabled="true" />
+      <module name="logstash-input-kafka-then-s3" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="JRUBY_OPTS" value="-X+O" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/spec/inputs/kafka_then_s3_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="LogStash::Inputs::TestKafkaThenS3 should retrieve event from kafka" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
@@ -455,6 +364,7 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
       <node-options />
       <gulpfile />
       <tasks />
@@ -465,24 +375,29 @@
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
       <command value="run-script" />
       <scripts />
+      <node-interpreter value="project" />
       <envs />
       <method />
     </configuration>
-    <list size="4">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="RSpec.LogStash::Inputs::TestKafkaThenS3 should fail without topic configs: logstash-input-kafka-then-s3" />
       <item index="1" class="java.lang.String" itemvalue="RSpec.LogStash::Inputs::TestKafkaThenS3 should populate kafka config with default values: logstash-input-kafka-then-s3" />
       <item index="2" class="java.lang.String" itemvalue="RSpec.Run spec 'kafka-then-s3_spec': logstash-input-kafka-then-s3" />
       <item index="3" class="java.lang.String" itemvalue="RSpec.Run spec 'kafka_then_s3_spec': logstash-input-kafka-then-s3" />
+      <item index="4" class="java.lang.String" itemvalue="RSpec.LogStash::Inputs::TestKafkaThenS3 should retrieve event from kafka: logstash-input-kafka-then-s3" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="RSpec.Run spec 'kafka_then_s3_spec': logstash-input-kafka-then-s3" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="RSpec.LogStash::Inputs::TestKafkaThenS3 should retrieve event from kafka: logstash-input-kafka-then-s3" />
         <item index="1" class="java.lang.String" itemvalue="RSpec.Run spec 'kafka-then-s3_spec': logstash-input-kafka-then-s3" />
-        <item index="2" class="java.lang.String" itemvalue="RSpec.LogStash::Inputs::TestKafkaThenS3 should populate kafka config with default values: logstash-input-kafka-then-s3" />
+        <item index="2" class="java.lang.String" itemvalue="RSpec.Run spec 'kafka_then_s3_spec': logstash-input-kafka-then-s3" />
+        <item index="3" class="java.lang.String" itemvalue="RSpec.LogStash::Inputs::TestKafkaThenS3 should populate kafka config with default values: logstash-input-kafka-then-s3" />
       </list>
     </recent_temporary>
   </component>
-  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -491,11 +406,20 @@
       <changelist id="4ab8eaab-27d1-43c4-bd2f-129ddbbf17b0" name="Default" comment="" />
       <created>1459087988667</created>
       <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
       <updated>1459087988667</updated>
+      <workItem from="1461488363583" duration="541000" />
+      <workItem from="1461488958068" duration="363000" />
+      <workItem from="1461489347595" duration="3090000" />
+      <workItem from="1461496519425" duration="619000" />
+      <workItem from="1461497234234" duration="43699000" />
+      <workItem from="1461688640591" duration="109000" />
+      <workItem from="1461688775895" duration="11260000" />
     </task>
     <task id="LOCAL-00001" summary="add tests">
       <created>1461151855474</created>
       <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
       <updated>1461151855474</updated>
     </task>
@@ -503,60 +427,92 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Run_spec__kafka-then-s3_spec___logstash-input-kafka-then-s3 - 2016.04.21 at 11h 27m 37s.xml">
-      <configuration name="Run spec 'kafka-then-s3_spec': logstash-input-kafka-then-s3" configurationId="RSpecRunConfigurationType" />
+    <history-entry file="LogStash__Inputs__TestKafkaThenS3_should_retrieve_event_from_kafka__logstash-input-kafka-then-s3 - 2016.04.27 at 09h 52m 56s.xml">
+      <configuration name="LogStash::Inputs::TestKafkaThenS3 should retrieve event from kafka: logstash-input-kafka-then-s3" configurationId="RSpecRunConfigurationType" />
     </history-entry>
-    <history-entry file="Run_spec__kafka-then-s3_spec___logstash-input-kafka-then-s3 - 2016.04.21 at 11h 28m 05s.xml">
-      <configuration name="Run spec 'kafka-then-s3_spec': logstash-input-kafka-then-s3" configurationId="RSpecRunConfigurationType" />
+    <history-entry file="LogStash__Inputs__TestKafkaThenS3_should_retrieve_event_from_kafka__logstash-input-kafka-then-s3 - 2016.04.27 at 09h 53m 19s.xml">
+      <configuration name="LogStash::Inputs::TestKafkaThenS3 should retrieve event from kafka: logstash-input-kafka-then-s3" configurationId="RSpecRunConfigurationType" />
     </history-entry>
-    <history-entry file="Run_spec__kafka-then-s3_spec___logstash-input-kafka-then-s3 - 2016.04.21 at 11h 44m 04s.xml">
-      <configuration name="Run spec 'kafka-then-s3_spec': logstash-input-kafka-then-s3" configurationId="RSpecRunConfigurationType" />
+    <history-entry file="LogStash__Inputs__TestKafkaThenS3_should_retrieve_event_from_kafka__logstash-input-kafka-then-s3 - 2016.04.27 at 10h 02m 43s.xml">
+      <configuration name="LogStash::Inputs::TestKafkaThenS3 should retrieve event from kafka: logstash-input-kafka-then-s3" configurationId="RSpecRunConfigurationType" />
     </history-entry>
-    <history-entry file="Run_spec__kafka-then-s3_spec___logstash-input-kafka-then-s3 - 2016.04.21 at 12h 38m 31s.xml">
-      <configuration name="Run spec 'kafka-then-s3_spec': logstash-input-kafka-then-s3" configurationId="RSpecRunConfigurationType" />
+    <history-entry file="LogStash__Inputs__TestKafkaThenS3_should_retrieve_event_from_kafka__logstash-input-kafka-then-s3 - 2016.04.27 at 10h 03m 26s.xml">
+      <configuration name="LogStash::Inputs::TestKafkaThenS3 should retrieve event from kafka: logstash-input-kafka-then-s3" configurationId="RSpecRunConfigurationType" />
     </history-entry>
-    <history-entry file="Run_spec__kafka-then-s3_spec___logstash-input-kafka-then-s3 - 2016.04.21 at 12h 40m 30s.xml">
-      <configuration name="Run spec 'kafka-then-s3_spec': logstash-input-kafka-then-s3" configurationId="RSpecRunConfigurationType" />
+    <history-entry file="LogStash__Inputs__TestKafkaThenS3_should_retrieve_event_from_kafka__logstash-input-kafka-then-s3 - 2016.04.27 at 10h 05m 30s.xml">
+      <configuration name="LogStash::Inputs::TestKafkaThenS3 should retrieve event from kafka: logstash-input-kafka-then-s3" configurationId="RSpecRunConfigurationType" />
     </history-entry>
-    <history-entry file="Run_spec__kafka-then-s3_spec___logstash-input-kafka-then-s3 - 2016.04.21 at 12h 42m 32s.xml">
-      <configuration name="Run spec 'kafka-then-s3_spec': logstash-input-kafka-then-s3" configurationId="RSpecRunConfigurationType" />
+    <history-entry file="LogStash__Inputs__TestKafkaThenS3_should_retrieve_event_from_kafka__logstash-input-kafka-then-s3 - 2016.04.27 at 10h 07m 50s.xml">
+      <configuration name="LogStash::Inputs::TestKafkaThenS3 should retrieve event from kafka: logstash-input-kafka-then-s3" configurationId="RSpecRunConfigurationType" />
     </history-entry>
-    <history-entry file="Run_spec__kafka-then-s3_spec___logstash-input-kafka-then-s3 - 2016.04.21 at 15h 35m 42s.xml">
-      <configuration name="Run spec 'kafka-then-s3_spec': logstash-input-kafka-then-s3" configurationId="RSpecRunConfigurationType" />
+    <history-entry file="LogStash__Inputs__TestKafkaThenS3_should_retrieve_event_from_kafka__logstash-input-kafka-then-s3 - 2016.04.27 at 10h 10m 46s.xml">
+      <configuration name="LogStash::Inputs::TestKafkaThenS3 should retrieve event from kafka: logstash-input-kafka-then-s3" configurationId="RSpecRunConfigurationType" />
     </history-entry>
-    <history-entry file="Run_spec__kafka-then-s3_spec___logstash-input-kafka-then-s3 - 2016.04.21 at 15h 36m 01s.xml">
-      <configuration name="Run spec 'kafka-then-s3_spec': logstash-input-kafka-then-s3" configurationId="RSpecRunConfigurationType" />
+    <history-entry file="LogStash__Inputs__TestKafkaThenS3_should_retrieve_event_from_kafka__logstash-input-kafka-then-s3 - 2016.04.27 at 10h 12m 32s.xml">
+      <configuration name="LogStash::Inputs::TestKafkaThenS3 should retrieve event from kafka: logstash-input-kafka-then-s3" configurationId="RSpecRunConfigurationType" />
     </history-entry>
-    <history-entry file="Run_spec__kafka-then-s3_spec___logstash-input-kafka-then-s3 - 2016.04.21 at 15h 38m 04s.xml">
-      <configuration name="Run spec 'kafka-then-s3_spec': logstash-input-kafka-then-s3" configurationId="RSpecRunConfigurationType" />
+    <history-entry file="LogStash__Inputs__TestKafkaThenS3_should_retrieve_event_from_kafka__logstash-input-kafka-then-s3 - 2016.04.27 at 10h 14m 18s.xml">
+      <configuration name="LogStash::Inputs::TestKafkaThenS3 should retrieve event from kafka: logstash-input-kafka-then-s3" configurationId="RSpecRunConfigurationType" />
     </history-entry>
-    <history-entry file="Run_spec__kafka-then-s3_spec___logstash-input-kafka-then-s3 - 2016.04.21 at 16h 35m 28s.xml">
-      <configuration name="Run spec 'kafka-then-s3_spec': logstash-input-kafka-then-s3" configurationId="RSpecRunConfigurationType" />
+    <history-entry file="LogStash__Inputs__TestKafkaThenS3_should_retrieve_event_from_kafka__logstash-input-kafka-then-s3 - 2016.04.27 at 10h 14m 38s.xml">
+      <configuration name="LogStash::Inputs::TestKafkaThenS3 should retrieve event from kafka: logstash-input-kafka-then-s3" configurationId="RSpecRunConfigurationType" />
     </history-entry>
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="59681000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="0" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1660" height="809" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2903423" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2725464" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32986626" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.198125" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4694168" sideWeight="0.5106101" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32986626" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36998513" sideWeight="0.49684542" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32996634" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4680535" sideWeight="0.48938993" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39842874" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35129067" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32996634" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32859176" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39842874" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32986626" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4694168" sideWeight="0.5106101" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32986626" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3541963" sideWeight="0.49684542" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4694168" sideWeight="0.48938993" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2725464" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32859176" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39842874" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -577,34 +533,34 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="ruby-line">
-          <url>file://$PROJECT_DIR$/spec/inputs/kafka_then_s3_spec.rb</url>
-          <line>57</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="ruby-line">
           <url>file://$PROJECT_DIR$/lib/logstash/inputs/kafka_then_s3.rb</url>
-          <line>203</line>
+          <line>204</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="ruby-line">
-          <url>file://$PROJECT_DIR$/spec/inputs/kafka_then_s3_spec.rb</url>
-          <line>116</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="ruby-line">
-          <url>file://$PROJECT_DIR$/spec/inputs/kafka_then_s3_spec.rb</url>
-          <line>114</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="ruby-line">
           <url>file://$PROJECT_DIR$/lib/logstash/inputs/kafka_then_s3.rb</url>
-          <line>179</line>
+          <line>180</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="ruby-line">
           <url>file://C:/jruby-9.0.5.0/lib/ruby/stdlib/tmpdir.rb</url>
           <line>29</line>
           <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/lib/logstash/inputs/kafka_then_s3.rb</url>
+          <line>219</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/lib/logstash/inputs/kafka_then_s3.rb</url>
+          <line>224</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/lib/logstash/inputs/kafka_then_s3.rb</url>
+          <line>505</line>
+          <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -618,62 +574,156 @@
           <properties />
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="18" />
+      <option name="time" value="21" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/spec/inputs/kafka_then_s3_spec.rb">
+    <entry file="file://C:/rubygems-2.4.1/gems/rspec-core-3.1.7/lib/rspec/core/example_group.rb" />
+    <entry file="file://C:/rubygems-2.4.1/gems/logstash-core-2.3.1-java/lib/logstash/inputs/base.rb" />
+    <entry file="file://C:/rubygems-2.4.1/gems/rspec-core-3.1.7/lib/rspec/core/notifications.rb" />
+    <entry file="file://C:/rubygems-2.4.1/gems/rspec-core-3.1.7/lib/rspec/core.rb" />
+    <entry file="file://C:/rubygems-2.4.1/gems/rspec-core-3.1.7/lib/rspec/core/configuration.rb" />
+    <entry file="file://C:/rubygems-2.4.1/gems/rspec-core-3.1.7/lib/rspec/core/reporter.rb" />
+    <entry file="file://$APPLICATION_HOME_DIR$/rb/testing/patch/bdd/teamcity/spec/runner/formatter/teamcity/rspec3_formatter.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
+          <caret line="176" column="0" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/rubygems-2.4.1/gems/logstash-core-2.3.1-java/lib/logstash/patches/bugfix_jruby_2558.rb" />
+    <entry file="file://$APPLICATION_HOME_DIR$/rb/testing/patch/common/teamcity/utils/logger_util.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/jruby-9.0.5.0/lib/ruby/stdlib/set.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/rb/testing/patch/common/teamcity/utils/std_capture_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/rubygems-2.4.1/gems/rspec-core-3.1.7/lib/rspec/core/example.rb" />
+    <entry file="file://C:/rubygems-2.4.1/gems/rspec-core-3.1.7/lib/rspec/core/hooks.rb" />
+    <entry file="file://C:/rubygems-2.4.1/gems/rspec-expectations-3.1.2/lib/rspec/matchers.rb" />
+    <entry file="file://C:/rubygems-2.4.1/gems/rspec-expectations-3.1.2/lib/rspec/expectations/fail_with.rb" />
+    <entry file="file://C:/rubygems-2.4.1/gems/rspec-core-3.1.7/lib/rspec/core/memoized_helpers.rb" />
+    <entry file="file://$APPLICATION_HOME_DIR$/rubystubs22/class.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="115" column="8" selection-start-line="115" selection-start-column="8" selection-end-line="115" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/rubystubs22/etc.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="208" column="13" selection-start-line="208" selection-start-column="13" selection-end-line="208" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/rubystubs22/file.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="472" column="13" selection-start-line="472" selection-start-column="13" selection-end-line="472" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/rubygems-2.4.1/gems/logstash-core-2.3.1-java/lib/logstash/config/mixin.rb" />
+    <entry file="file://C:/jruby-9.0.5.0/lib/ruby/stdlib/tmpdir.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/rubygems-2.4.1/gems/aws-sdk-v1-1.66.0/lib/aws/s3/client.rb" />
+    <entry file="file://C:/jruby-9.0.5.0/lib/ruby/gems/shared/gems/aws-sdk-v1-1.66.0/lib/aws/core/credential_providers.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="139" column="0" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/jruby-9.0.5.0/lib/ruby/gems/shared/gems/rspec-expectations-3.1.2/lib/rspec/expectations/fail_with.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.rspec">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/3.4'">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/rubygems-2.4.1/gems/aws-sdk-v1-1.66.0/lib/aws/s3/client.rb">
+    <entry file="file://$APPLICATION_HOME_DIR$/rubystubs22/kernel.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="420" column="0" selection-start-line="420" selection-start-column="0" selection-end-line="420" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="134">
+          <caret line="866" column="14" selection-start-line="866" selection-start-column="8" selection-end-line="866" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/rubygems-2.4.1/gems/rspec-core-3.1.7/lib/rspec/core/memoized_helpers.rb">
+    <entry file="file://C:/jruby-9.0.5.0/lib/ruby/gems/shared/gems/aws-sdk-v1-1.66.0/lib/aws/s3/bucket.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="241" column="0" selection-start-line="241" selection-start-column="0" selection-end-line="241" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="161">
+          <caret line="521" column="24" selection-start-line="521" selection-start-column="8" selection-end-line="521" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/support/helpers.rb">
+    <entry file="file://C:/jruby-9.0.5.0/lib/ruby/gems/shared/gems/aws-sdk-v1-1.66.0/lib/aws/s3.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="229">
+          <caret line="154" column="8" selection-start-line="154" selection-start-column="8" selection-end-line="154" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/fixtures/json.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/integration/s3_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="49" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="49" />
-          <folding />
+        <state relative-caret-position="969">
+          <caret line="57" column="47" selection-start-line="57" selection-start-column="23" selection-end-line="57" selection-end-column="47" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/logstash/inputs/kafka_then_s3.rb">
+    <entry file="file://$PROJECT_DIR$/spec/fixtures/simple_text.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
@@ -681,225 +731,139 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/logstash-input-kafka_then_s3.gemspec">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="41" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/spec_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/rubygems-2.4.1/gems/logstash-devutils-0.0.19-java/lib/logstash/devutils/rspec/shared_examples.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/rubygems-2.4.1/gems/logstash-core-2.3.1-java/lib/logstash/plugin.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/rubygems-2.4.1/gems/rspec-core-3.1.7/lib/rspec/core/runner.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/rubygems-2.4.1/gems/rspec-core-3.1.7/lib/rspec/core/example_group.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.65589356">
-          <caret line="463" column="0" selection-start-line="463" selection-start-column="0" selection-end-line="463" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/rubygems-2.4.1/gems/logstash-core-2.3.1-java/lib/logstash/inputs/base.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/rubygems-2.4.1/gems/rspec-core-3.1.7/lib/rspec/core/notifications.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="172" column="0" selection-start-line="172" selection-start-column="0" selection-end-line="172" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/rubygems-2.4.1/gems/rspec-core-3.1.7/lib/rspec/core.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33269963">
-          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/rubygems-2.4.1/gems/rspec-core-3.1.7/lib/rspec/core/configuration.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33269963">
-          <caret line="1109" column="0" selection-start-line="1109" selection-start-column="0" selection-end-line="1109" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/rubygems-2.4.1/gems/rspec-core-3.1.7/lib/rspec/core/reporter.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33269963">
-          <caret line="133" column="0" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/rb/testing/patch/bdd/teamcity/spec/runner/formatter/teamcity/rspec3_formatter.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33269963">
-          <caret line="176" column="0" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/rubygems-2.4.1/gems/logstash-core-2.3.1-java/lib/logstash/patches/bugfix_jruby_2558.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.64448667">
-          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/rb/testing/patch/common/teamcity/utils/logger_util.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36501902">
-          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/jruby-9.0.5.0/lib/ruby/stdlib/set.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/rb/testing/patch/common/teamcity/utils/std_capture_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/rubygems-2.4.1/gems/rspec-core-3.1.7/lib/rspec/core/example.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="153" column="0" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/rubygems-2.4.1/gems/rspec-core-3.1.7/lib/rspec/core/hooks.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="407" column="32" selection-start-line="407" selection-start-column="32" selection-end-line="407" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/rubygems-2.4.1/gems/rspec-expectations-3.1.2/lib/rspec/matchers.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33275864">
-          <caret line="937" column="0" selection-start-line="937" selection-start-column="0" selection-end-line="937" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/rubygems-2.4.1/gems/rspec-expectations-3.1.2/lib/rspec/expectations/fail_with.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.66">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/rubygems-2.4.1/gems/rspec-core-3.1.7/lib/rspec/core/memoized_helpers.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="241" column="0" selection-start-line="241" selection-start-column="0" selection-end-line="241" selection-end-column="0" />
+        <state relative-caret-position="425">
+          <caret line="25" column="36" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/rubystubs22/class.rb">
+    <entry file="file://C:/jruby-9.0.5.0/lib/ruby/gems/shared/gems/logstash-mixin-aws-2.0.4/lib/logstash/plugin_mixins/aws_config.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33267716">
-          <caret line="115" column="8" selection-start-line="115" selection-start-column="8" selection-end-line="115" selection-end-column="8" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/rubystubs22/etc.rb">
+    <entry file="file://$PROJECT_DIR$/spec/support/helpers.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33267716">
-          <caret line="208" column="13" selection-start-line="208" selection-start-column="13" selection-end-line="208" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/rubystubs22/file.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8346457">
-          <caret line="472" column="13" selection-start-line="472" selection-start-column="13" selection-end-line="472" selection-end-column="13" />
+        <state relative-caret-position="51">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/rubygems-2.4.1/gems/logstash-core-2.3.1-java/lib/logstash/config/mixin.rb">
+    <entry file="file://C:/jruby-9.0.5.0/lib/ruby/gems/shared/gems/aws-sdk-v1-1.66.0/lib/aws/s3/s3_object.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33267716">
-          <caret line="211" column="0" selection-start-line="211" selection-start-column="0" selection-end-line="211" selection-end-column="0" />
+        <state relative-caret-position="61">
+          <caret line="1015" column="25" selection-start-line="1015" selection-start-column="12" selection-end-line="1015" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/jruby-9.0.5.0/lib/ruby/stdlib/tmpdir.rb">
+    <entry file="file://$APPLICATION_HOME_DIR$/rubystubs22/string.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43503937">
-          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+        <state relative-caret-position="311">
+          <caret line="694" column="36" selection-start-line="694" selection-start-column="36" selection-end-line="694" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/jruby-9.0.5.0/lib/ruby/stdlib/rubygems/platform.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="117" column="6" selection-start-line="117" selection-start-column="6" selection-end-line="117" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/jruby-9.0.5.0/lib/ruby/gems/shared/gems/tins-1.6.0/lib/tins/string_version.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="80" column="35" selection-start-line="80" selection-start-column="35" selection-end-line="80" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/2/studtmp-02e5e6643648ad308084a3736df54ea55ac41e34b55acf05e487d610dfc0/simple_text.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/rubygems-2.4.1/gems/aws-sdk-v1-1.66.0/lib/aws/s3/client.rb">
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/2/studtmp-eaf81da4c38ff86ba93b70a685471be09750c10673a9b681fc60ff77a06a/simple_text.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="420" column="0" selection-start-line="420" selection-start-column="0" selection-end-line="420" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/logstash/inputs/kafka_then_s3.rb">
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/2/studtmp-f6b9036fdcc7ec3e73b31700018c9ab48f6b603b83a95e514ba1323cc900/simple_text.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/2/studtmp-addb153f002f6e266c75c5a1fe414b248bb9368b27f746707a920245fb84/simple_text.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="24" selection-start-line="0" selection-start-column="24" selection-end-line="0" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/2/studtmp-6dddb489ed3a9db6878e3b63ce061bf6714f25afe2a1c62917466be4ccd8/simple_text.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/2/studtmp-92a9b3b4668f92e7c3bfdb4c30f7c782c51bd29e8c9c8e4f612111654e6a/simple_text.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/2/studtmp-8999222579cf2d5d6ecda8acaa52610226cd740496be8aaa4ccaa0c3773e/simple_text.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/2/studtmp-63caced6d22eec65a3640a764fbc7544f5209fe604f9cbb451f7d46b0923/simple_text.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/2/studtmp-2ea7774537d7bcf293e6a2eda4a07acb135062724d1643afb340cec89fc8/simple_text.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/inputs/kafka_then_s3_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="87" column="45" selection-start-line="87" selection-start-column="45" selection-end-line="87" selection-end-column="45" />
+        <state relative-caret-position="107">
+          <caret line="186" column="41" selection-start-line="186" selection-start-column="30" selection-end-line="186" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/support/helpers.rb">
+    <entry file="file://$PROJECT_DIR$/lib/logstash/inputs/kafka_then_s3.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/integration/s3_spec.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.09385863">
-          <caret line="21" column="49" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="49" />
+        <state relative-caret-position="299">
+          <caret line="417" column="35" selection-start-line="417" selection-start-column="35" selection-end-line="417" selection-end-column="35" />
           <folding />
         </state>
       </provider>

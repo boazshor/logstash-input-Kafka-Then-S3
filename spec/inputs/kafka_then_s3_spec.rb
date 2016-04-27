@@ -30,7 +30,7 @@ class LogStash::Inputs::TestKafkaThenS3 < LogStash::Inputs::KafkaThenS3
 
   class TestKafkaGroup < Kafka::Group
     def run(a_num_threads, a_queue)
-      blah = TestMessageAndMetadata.new(@topic, 0, nil, 'Kafka message', 1)
+      blah = TestMessageAndMetadata.new(@topic, 0, nil, "{\"context\":{\"filename\":\"simple_text.txt\"}}", 1)
       a_queue << blah
     end
   end
@@ -53,7 +53,7 @@ class LogStash::Inputs::TestKafkaThenS3 < LogStash::Inputs::KafkaThenS3
 
   class TestInfiniteKafkaGroup < Kafka::Group
     def run(a_num_threads, a_queue)
-      blah = TestMessageAndMetadata.new(@topic, 0, nil, 'Kafka message', 1)
+      blah = TestMessageAndMetadata.new(@topic, 0, nil,  "{\"context\":{\"filename\":\"kafka.message\"}}", 1)
       Thread.new do
         while true
           a_queue << blah
@@ -66,28 +66,45 @@ class LogStash::Inputs::TestKafkaThenS3 < LogStash::Inputs::KafkaThenS3
 
 
   describe LogStash::Inputs::TestKafkaThenS3 do
-       before do
-         FileUtils.mkdir_p(sincedb_path)
-         AWS.stub!
-         Thread.abort_on_exception = true
-       end
-       context "when interrupting the plugin" do
-         let(:config) { super.merge({ "interval" => 5 }) }
+    before (:each) do
+        # FileUtils.mkdir_p(sincedb_path)
 
-         before do
-           expect_any_instance_of(LogStash::Inputs::KafkaThenS3).to receive(:list_new_files).and_return(TestKafkaThenS3.new)
-         end
+      ENV['AWS_LOGSTASH_TEST_BUCKET'] = "logstash-test"
+      AWS.stub!
+      filename = '../fixtures/simple_text.txt'
+      fullPath = File.expand_path(File.join(File.dirname(__FILE__), filename))
 
-         it_behaves_like "an interruptible input plugin"
-       end
+      AWS::S3::S3Object.any_instance.stub(:read).and_yield('simple file from s3 ')
+
+      # allow(AWS::S3::S3Object).to receive(:read).and_yield('ttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt')
+      # allow(AWS::S3::S3Object.any_instance).to receive(:read).and_yield('ddddddddddddddddddddddddddddddddddddddddddddddddddddddddd')
+      # res = AWS::S3::S3Object.any_instance.stub_for(:read)
+      # res.data = "test"
+      # upload_file(filename, "simple_text.txt")
+      Thread.abort_on_exception = true
+      end
+       # before do
+       #   FileUtils.mkdir_p(sincedb_path)
+       #   AWS.stub!
+       #   Thread.abort_on_exception = true
+       # end
+       # context "when interrupting the plugin" do
+       #   let(:config) { super.merge({ "interval" => 5 }) }
+       #
+       #   before do
+       #     expect_any_instance_of(LogStash::Inputs::KafkaThenS3).to receive(:list_new_files).and_return(TestKafkaThenS3.new)
+       #   end
+       #
+       #   it_behaves_like "an interruptible input plugin"
+       # end
 
 
 
-       after do
-         delete_remote_files(prefix)
-         FileUtils.rm_rf(temporary_directory)
-         delete_remote_files(backup_prefix)
-       end
+       # after do
+       #   delete_remote_files(prefix)
+       #   FileUtils.rm_rf(temporary_directory)
+       #   delete_remote_files(backup_prefix)
+       # end
 
 
     let (:kafka_config) {{'topic_id' => 'test',
@@ -136,17 +153,17 @@ class LogStash::Inputs::TestKafkaThenS3 < LogStash::Inputs::KafkaThenS3
 
 
 
-    it_behaves_like "an interruptible input plugin" do
-      let(:config) { kafka_config }
-      let(:mock_kafka_plugin) { LogStash::Inputs::TestInfiniteKafka.new(config) }
-
-      before :each do
-        allow(LogStash::Inputs::TestKafkaThenS3).to receive(:new).and_return(mock_kafka_plugin)
-        expect(subject).to receive(:create_consumer_group) do |options|
-          TestInfiniteKafkaGroup.new(options)
-        end
-      end
-    end
+    # it_behaves_like "an interruptible input plugin" do
+    #   let(:config) { kafka_config }
+    #   let(:mock_kafka_plugin) { LogStash::Inputs::TestInfiniteKafka.new(config) }
+    #
+    #   before :each do
+    #     allow(LogStash::Inputs::TestKafkaThenS3).to receive(:new).and_return(mock_kafka_plugin)
+    #     expect(subject).to receive(:create_consumer_group) do |options|
+    #       TestInfiniteKafkaGroup.new(options)
+    #     end
+    #   end
+    # end
 
     it 'should populate kafka config with default values' do
       kafka = LogStash::Inputs::TestKafkaThenS3.new(kafka_config)
@@ -156,20 +173,23 @@ class LogStash::Inputs::TestKafkaThenS3 < LogStash::Inputs::KafkaThenS3
       !insist { kafka.reset_beginning }
     end
 
-    # it 'should retrieve event from kafka' do
-    #   kafka = LogStash::Inputs::TestKafkaThenS3.new(kafka_config)
-    #   expect(kafka).to receive(:create_consumer_group) do |options|
-    #     TestKafkaGroup.new(options)
-    #   end
-    #   kafka.register
-    #
-    #   logstash_queue = Queue.new
-    #   kafka.run logstash_queue
-    #   e = logstash_queue.pop
-    #   insist { e['message'] } == 'Kafka message'
-    #   # no metadata by default
-    #   insist { e['kafka'] } == nil
-    # end
+    it 'should retrieve event from kafka' do
+
+      kafka = LogStash::Inputs::TestKafkaThenS3.new(kafka_config)
+      expect(kafka).to receive(:create_consumer_group) do |options|
+        TestKafkaGroup.new(options)
+      end
+      kafka.register
+
+      logstash_queue = Queue.new
+      kafka.run logstash_queue
+      e = logstash_queue.pop
+      printf "the msg is : "+e['message'] + "\n"
+      # printf "the context is : "+JSON.parse(e)+ "\n"
+      insist { e['message'] } == 'simple file from s3 '
+      # no metadata by default
+      insist { e['kafka'] } == nil
+    end
 
 
   end

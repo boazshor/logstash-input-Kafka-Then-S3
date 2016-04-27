@@ -160,11 +160,12 @@ class LogStash::Inputs::KafkaThenS3 < LogStash::Inputs::Base
 
     @region = get_region
 
-    @logger.info("Registering s3 input", :bucket => @bucket, :region => @region)
+    @logger.info("Registering kafkaThenS3 input", :bucket => @bucket, :region => @region)
 
     s3 = get_s3object
-
+    @logger.debug("the bucket name in register is : " + @bucket +"\n")
     @s3bucket = s3.buckets[@bucket]
+
 
     unless @backup_to_bucket.nil?
       @backup_bucket = s3.buckets[@backup_to_bucket]
@@ -220,7 +221,6 @@ class LogStash::Inputs::KafkaThenS3 < LogStash::Inputs::Base
     @logger.info('Running kafka', :group_id => @group_id, :topic_id => @topic_id, :zk_connect => @zk_connect)
     begin
       @consumer_group.run(@consumer_threads,@kafka_client_queue)
-
       while !stop?
         event = @kafka_client_queue.pop
         if event == KAFKA_SHUTDOWN_EVENT
@@ -267,12 +267,12 @@ class LogStash::Inputs::KafkaThenS3 < LogStash::Inputs::Base
         #                     'key' => message_and_metadata.key,
         #                     'messge' => message_and_metadata.message}
         msg = JSON.parse(event["message"])
+       @logger.debug( "after json.parse : "+ msg.to_s)
         @logger.warn('the msg from kafka',:message => "#{event['message']}")
 
         process_files(msg, output_queue)
       end
-        # output_queue << event
-        # @current_thread = Thread.current
+
 
       # end # @codec.decode
     rescue => e # parse or event creation error
@@ -281,21 +281,7 @@ class LogStash::Inputs::KafkaThenS3 < LogStash::Inputs::Base
     end # begin
   end # def queue_event
   # public
-  # def list_new_files
-  #   objects = {}
-  #
-  #   @s3bucket.objects.with_prefix(@prefix).each do |log|
-  #     @logger.debug("S3 input: Found key", :key => log.key)
-  #
-  #     unless ignore_filename?(log.key)
-  #       if sincedb.newer?(log.last_modified)
-  #         objects[log.key] = log.last_modified
-  #         @logger.debug("S3 input: Adding to objects[]", :key => log.key)
-  #       end
-  #     end
-  #   end
-  #   return objects.keys.sort {|a,b| objects[a] <=> objects[b]}
-  # end # def fetch_new_files
+
 
   public
   def backup_to_bucket(object, key)
@@ -318,11 +304,7 @@ class LogStash::Inputs::KafkaThenS3 < LogStash::Inputs::Base
 
   public
   def process_files(event ,queue)
-    # objects = list_new_files
-
-
-
-        @logger.warn("S3 input processing", :bucket => @bucket, :key => event["filename"])
+        @logger.info("S3 input processing", :bucket => @bucket, :key => event["filename"])
         process_log(queue, event)
 
 
@@ -354,19 +336,17 @@ class LogStash::Inputs::KafkaThenS3 < LogStash::Inputs::Base
   # @param [String] Which file to read from
   # @return [Boolean] True if the file was completely read, false otherwise.
   def process_local_log(queue, filename, origEvent)
-    @logger.warn('Processing file', :filename => filename)
-
+   @logger.debug( "Processing file " + filename)
     metadata = {}
     # Currently codecs operates on bytes instead of stream.
     # So all IO stuff: decompression, reading need to be done in the actual
     # input and send as bytes to the codecs.
     read_file(filename) do |line, isEof|
+
       if stop?
         @logger.warn("Logstash S3 input, stop reading in the middle of the file, we will read it again when logstash is started")
         return false
       end
-      @logger.warn('reading first line before codec.decode', {:line => line, :lineString => line.to_s})
-
       @codec.decode(line) do |event|
         # We are making an assumption concerning cloudfront
         # log format, the user will use the plain or the line codec
@@ -382,6 +362,7 @@ class LogStash::Inputs::KafkaThenS3 < LogStash::Inputs::Base
           update_metadata(metadata, event)
         else
           decorate(event)
+          # printf "the eof is " + isEof + "\n"
           event["isEof"] = isEof
           event["context"] = origEvent['context']
           queue << event
@@ -431,10 +412,12 @@ class LogStash::Inputs::KafkaThenS3 < LogStash::Inputs::Base
     end
   end
 
-  def read_plain_file(filename, block)
 
+  def read_plain_file(filename, block)
+   @logger.debug( "in read plain file , the fileName is : "+filename + "\n")
     File.open(filename, 'rb') do |file|
-      {:line  =>file.each(&block), :isEof => file.eof}
+     # printf "in file open,is EOF : " + file.eof? + "\n"
+     file.each {|line| block.call(line,file.eof?)}
     end
   end
 
@@ -490,11 +473,13 @@ class LogStash::Inputs::KafkaThenS3 < LogStash::Inputs::Base
   private
   def process_log(queue, event)
     key = event["context"]["filename"]
+   @logger.debug( "ant the key is : "+key + "\n")
     object = @s3bucket.objects[key]
-    @logger.warn("the msg is:",:event => event)
+   @logger.debug( "S3 bucket returns : "+ object.to_s + "\n")
     filename = File.join(temporary_directory, File.basename(key))
-
+   @logger.debug( "file name is : "+ filename + "\n")
     if download_remote_file(object, filename)
+     @logger.debug( "after save to local \n")
       if process_local_log(queue, filename, event)
         lastmod = object.last_modified
         backup_to_bucket(object, key)
@@ -515,11 +500,15 @@ class LogStash::Inputs::KafkaThenS3 < LogStash::Inputs::Base
   # @param [String] The Temporary filename to stream to.
   # @return [Boolean] True if the file was completely downloaded
   def download_remote_file(remote_object, local_filename)
+    # cont = remote_object.read
+#" the content is  : " + cont.to_s + "\n"))
     completed = false
-
     @logger.warn("S3 input: Download remote file", :remote_key => remote_object.key, :local_filename => local_filename)
     File.open(local_filename, 'wb') do |s3file|
+
+     @logger.debug( "before remote.read " + remote_object.to_s )
       remote_object.read do |chunk|
+       @logger.debug( "In remote object read, the chunk is : " + chunk.to_s)
         return completed if stop?
         s3file.write(chunk)
       end
