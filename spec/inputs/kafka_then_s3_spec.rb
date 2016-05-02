@@ -149,10 +149,14 @@ class TestKafkaGZGroup < Kafka::Group
       kafkaThenS3.run logstash_queue
       e = logstash_queue.pop
       expect(e['context']).to be_truthy
-      # expect(e['isEof']).to eq(true)
+      expect(e['isEof']).to eq(false)
       insist { e['message'] } == simpleTextFileContent
       # no metadata by default
       insist { e['kafka'] } == nil
+      eEOF = logstash_queue.pop
+      expect(eEOF['context']).to be_truthy
+      expect(eEOF['isEof']).to eq(true)
+
     end
     #
     it 'should retrieve event from kafka and fetch a gzip file from S3' do

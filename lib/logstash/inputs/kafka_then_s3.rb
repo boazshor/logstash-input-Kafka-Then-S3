@@ -13,7 +13,7 @@ require "json"
 # This input will retrieve the file specified under the key "s3_key" from S3 and will stream it to the filter line by line.
 # This input also supports a seconed key in the message from Kafka called "context".
 # The key "context" is also a JSON object, it can be empty or contain any content you wish to pass to the filter.
-# The entier "context" object will be passed as is to the filter ontop of every logstash event, under a key called "context"
+# The entire "context" object will be passed as is to the filter ontop of every logstash event, under a key called "context"
 # example Kafka message :
 #{
 #   "s3_key" : "path to your S3 object in your bucket",
@@ -113,6 +113,8 @@ class LogStash::Inputs::KafkaThenS3 < LogStash::Inputs::Base
   config :bucket, :validate => :string, :required => true
   # Option to add metadata. When a file is read, the content is passed to the filter line by line.
   # If this parameter is set to true, a field named isEOF will be added to the logstash event. This field contains a boolean value.
+  # This will always be equal to false, but if the last line is read, an additional event will be sent.
+  # This event will contain the context object and here the isEOF key on the logstash event will be equal to true.
   config :isEOF, :validate => :boolean, :default => false
 
   # The AWS region for your bucket.
@@ -303,12 +305,17 @@ class LogStash::Inputs::KafkaThenS3 < LogStash::Inputs::Base
         end
         event["context"] = origEvent['context']
         queue << event
-        # if @isEOF && isEof
-        #   @logger.debug("Sending EOF to logstash event")
-        #   event["isEof"] = isEof
-        #   queue << event
-        # end
       end
+      if @isEOF && isEof
+        @codec.decode(line) do |event|
+          decorate(event)
+          event["isEof"] = true
+          @logger.debug("in eof event the eof indicator is : #{event["isEof"]}")
+          event["context"] = origEvent['context']
+          queue << event
+        end
+      end
+
     end
 
     return true
