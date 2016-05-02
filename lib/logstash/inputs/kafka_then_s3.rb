@@ -8,13 +8,17 @@ require "stud/interval"
 require "stud/temporary"
 require "json"
 
-# This input will read events from a Kafka topic, the message must be a JSON object and contain a key called "filename".
-# The value of the key "filename" should be a path to the file you whish to stream to the filer in your S3 bucket (defined in the configuration).
-# This input will retrieve the file specified under the key "filename" from S3 and will stream it to the filter line by line.
+# This input will read events from a Kafka topic, the message must be a JSON object and contain a key called "s3_key".
+# The value of the key "s3_key" should be a path to the file you whish to stream to the filer in your S3 bucket (defined in the configuration).
+# This input will retrieve the file specified under the key "s3_key" from S3 and will stream it to the filter line by line.
 # This input also supports a seconed key in the message from Kafka called "context".
 # The key "context" is also a JSON object, it can be empty or contain any content you wish to pass to the filter.
 # The entier "context" object will be passed as is to the filter ontop of every logstash event, under a key called "context"
-
+# example Kafka message :
+#{
+#   "s3_key" : "path to your S3 object in your bucket",
+#   "context" : {...(any JSON key value pair)}
+# }
 # It uses the high level consumer API provided
 # by Kafka to read messages from the broker. It also maintains the state of what has been
 # consumed using Zookeeper. The default input codec is json
@@ -257,7 +261,7 @@ class LogStash::Inputs::KafkaThenS3 < LogStash::Inputs::Base
 
   public
   def process_files(event ,queue)
-    @logger.info("S3 input processing", :bucket => @bucket, :key => event["filename"])
+    @logger.info("S3 input processing", :bucket => @bucket, :key => event["s3_key"])
     process_log(queue, event)
   end # def process_files
 
@@ -281,7 +285,7 @@ class LogStash::Inputs::KafkaThenS3 < LogStash::Inputs::Base
   # @param [String] Which file to read from
   # @return [Boolean] True if the file was completely read, false otherwise.
   def process_local_log(queue, filename, origEvent)
-    @logger.debug( "Processing file " + filename)
+    @logger.debug( "Processing file #{filename}")
     metadata = {}
     # Currently codecs operates on bytes instead of stream.
     # So all IO stuff: decompression, reading need to be done in the actual
@@ -329,7 +333,7 @@ class LogStash::Inputs::KafkaThenS3 < LogStash::Inputs::Base
   def read_gzip_file(filename, block)
     begin
       Zlib::GzipReader.open(filename) do |decoder|
-        decoder.each_line { |line| block.call(line  ) }
+        decoder.each_line { |line| block.call(line, decoder.eof?  ) }
       end
     rescue Zlib::Error, Zlib::GzipFile::Error => e
       @logger.error("Gzip codec: We cannot uncompress the gzip file", :filename => filename)
@@ -361,7 +365,7 @@ class LogStash::Inputs::KafkaThenS3 < LogStash::Inputs::Base
 
   private
   def process_log(queue, event)
-    key = event["context"]["filename"]
+    key = event["s3_key"]
     @logger.debug( "ant the key is : #{key } \n")
     object = @s3bucket.objects[key]
     @logger.debug( "S3 bucket returns : #{object} \n")

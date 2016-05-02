@@ -2,18 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ab8eaab-27d1-43c4-bd2f-129ddbbf17b0" name="Default" comment="add tests">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/spec/fixtures/cloudfront.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/spec/fixtures/invalid_utf8.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/spec/fixtures/json.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/spec/fixtures/simple_text.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/spec/fixtures/uncompressed.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/spec/integration/s3_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/spec/resources/compressed.log.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/spec/support/helpers.rb" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/logstash-input-kafka-then-s3.iml" afterPath="$PROJECT_DIR$/.idea/logstash-input-kafka-then-s3.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.rspec" afterPath="$PROJECT_DIR$/.rspec" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DEVELOPER.md" afterPath="$PROJECT_DIR$/DEVELOPER.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LICENSE" afterPath="$PROJECT_DIR$/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Rakefile" afterPath="$PROJECT_DIR$/Rakefile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/logstash/inputs/kafka_then_s3.rb" afterPath="$PROJECT_DIR$/lib/logstash/inputs/kafka_then_s3.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logstash-input-kafka_then_s3.gemspec" afterPath="$PROJECT_DIR$/logstash-input-kafka_then_s3.gemspec" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/inputs/kafka_then_s3_spec.rb" afterPath="$PROJECT_DIR$/spec/inputs/kafka_then_s3_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/spec_helper.rb" afterPath="$PROJECT_DIR$/spec/spec_helper.rb" />
     </list>
     <ignored path="logstash-input-kafka-then-s3.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,7 +27,7 @@
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/logstash-input-Kafka-Then-S3@LogStash__Inputs__TestKafkaThenS3_should_retrieve_event_from_kafka__logstash_input_kafka_then_s3.coverage" NAME="LogStash::Inputs::TestKafkaThenS3 should retrieve event from kafka: logstash-input-kafka-then-s3 Coverage Results" MODIFIED="1461758851471" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="logstash-input-kafka-then-s3" />
-    <SUITE FILE_PATH="coverage/logstash-input-Kafka-Then-S3@LogStash__Inputs__KafkaThenS3__logstash_input_kafka_then_s3.coverage" NAME="LogStash::Inputs::KafkaThenS3: logstash-input-kafka-then-s3 Coverage Results" MODIFIED="1462125787432" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="logstash-input-kafka-then-s3" />
+    <SUITE FILE_PATH="coverage/logstash-input-Kafka-Then-S3@LogStash__Inputs__KafkaThenS3__logstash_input_kafka_then_s3.coverage" NAME="LogStash::Inputs::KafkaThenS3: logstash-input-kafka-then-s3 Coverage Results" MODIFIED="1462177925013" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="logstash-input-kafka-then-s3" />
     <SUITE FILE_PATH="coverage/logstash-input-Kafka-Then-S3@LogStash__Inputs__TestKafkaThenS3__logstash_input_kafka_then_s3.coverage" NAME="LogStash::Inputs::TestKafkaThenS3: logstash-input-kafka-then-s3 Coverage Results" MODIFIED="1462125640195" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="logstash-input-kafka-then-s3" />
     <SUITE FILE_PATH="coverage/logstash-input-kafka-then-s3@LogStash__Inputs__TestKafkaThenS3_should_fail_without_topic_configs__logstash_input_kafka_then_s3.coverage" NAME="LogStash::Inputs::TestKafkaThenS3 should fail without topic configs: logstash-input-kafka-then-s3 Coverage Results" MODIFIED="1461171782683" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="logstash-input-kafka-then-s3" />
     <SUITE FILE_PATH="coverage/logstash-input-Kafka-Then-S3@Run_spec__kafka_then_s3_spec___logstash_input_kafka_then_s3.coverage" NAME="Run spec 'kafka-then-s3_spec': logstash-input-kafka-then-s3 Coverage Results" MODIFIED="1462124722529" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="logstash-input-kafka-then-s3" />
@@ -48,8 +47,8 @@
       <file leaf-file-name="kafka_then_s3_spec.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spec/inputs/kafka_then_s3_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="56" column="16" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="16" />
+            <state relative-caret-position="544">
+              <caret line="32" column="108" selection-start-line="32" selection-start-column="108" selection-end-line="32" selection-end-column="108" />
               <folding />
             </state>
           </provider>
@@ -58,8 +57,8 @@
       <file leaf-file-name="kafka_then_s3.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/logstash/inputs/kafka_then_s3.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="15" column="123" selection-start-line="15" selection-start-column="116" selection-end-line="15" selection-end-column="123" />
+            <state relative-caret-position="102">
+              <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -101,8 +100,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1900" />
-    <option name="height" value="839" />
+    <option name="width" value="1416" />
+    <option name="height" value="849" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -519,7 +518,7 @@
       <workItem from="1461496519425" duration="619000" />
       <workItem from="1461497234234" duration="43699000" />
       <workItem from="1461688640591" duration="109000" />
-      <workItem from="1461688775895" duration="37854000" />
+      <workItem from="1461688775895" duration="40012000" />
     </task>
     <task id="LOCAL-00001" summary="add tests">
       <created>1461151855474</created>
@@ -538,8 +537,23 @@
     <history-entry file="LogStash__Inputs__KafkaThenS3__logstash-input-kafka-then-s3 - 2016.05.01 at 18h 03m 15s.xml">
       <configuration name="LogStash::Inputs::KafkaThenS3: logstash-input-kafka-then-s3" configurationId="RSpecRunConfigurationType" />
     </history-entry>
-    <history-entry file="LogStash__Inputs__TestKafkaThenS3__logstash-input-kafka-then-s3 - 2016.05.01 at 17h 51m 27s.xml">
-      <configuration name="LogStash::Inputs::TestKafkaThenS3: logstash-input-kafka-then-s3" configurationId="RSpecRunConfigurationType" />
+    <history-entry file="LogStash__Inputs__KafkaThenS3__logstash-input-kafka-then-s3 - 2016.05.02 at 08h 15m 16s.xml">
+      <configuration name="LogStash::Inputs::KafkaThenS3: logstash-input-kafka-then-s3" configurationId="RSpecRunConfigurationType" />
+    </history-entry>
+    <history-entry file="LogStash__Inputs__KafkaThenS3__logstash-input-kafka-then-s3 - 2016.05.02 at 08h 15m 33s.xml">
+      <configuration name="LogStash::Inputs::KafkaThenS3: logstash-input-kafka-then-s3" configurationId="RSpecRunConfigurationType" />
+    </history-entry>
+    <history-entry file="LogStash__Inputs__KafkaThenS3__logstash-input-kafka-then-s3 - 2016.05.02 at 08h 23m 15s.xml">
+      <configuration name="LogStash::Inputs::KafkaThenS3: logstash-input-kafka-then-s3" configurationId="RSpecRunConfigurationType" />
+    </history-entry>
+    <history-entry file="LogStash__Inputs__KafkaThenS3__logstash-input-kafka-then-s3 - 2016.05.02 at 08h 26m 26s.xml">
+      <configuration name="LogStash::Inputs::KafkaThenS3: logstash-input-kafka-then-s3" configurationId="RSpecRunConfigurationType" />
+    </history-entry>
+    <history-entry file="LogStash__Inputs__KafkaThenS3__logstash-input-kafka-then-s3 - 2016.05.02 at 08h 31m 58s.xml">
+      <configuration name="LogStash::Inputs::KafkaThenS3: logstash-input-kafka-then-s3" configurationId="RSpecRunConfigurationType" />
+    </history-entry>
+    <history-entry file="LogStash__Inputs__KafkaThenS3__logstash-input-kafka-then-s3 - 2016.05.02 at 08h 32m 12s.xml">
+      <configuration name="LogStash::Inputs::KafkaThenS3: logstash-input-kafka-then-s3" configurationId="RSpecRunConfigurationType" />
     </history-entry>
     <history-entry file="LogStash__Inputs__TestKafkaThenS3__logstash-input-kafka-then-s3 - 2016.05.01 at 17h 55m 28s.xml">
       <configuration name="LogStash::Inputs::TestKafkaThenS3: logstash-input-kafka-then-s3" configurationId="RSpecRunConfigurationType" />
@@ -547,24 +561,9 @@
     <history-entry file="LogStash__Inputs__TestKafkaThenS3__logstash-input-kafka-then-s3 - 2016.05.01 at 18h 00m 46s.xml">
       <configuration name="LogStash::Inputs::TestKafkaThenS3: logstash-input-kafka-then-s3" configurationId="RSpecRunConfigurationType" />
     </history-entry>
-    <history-entry file="Run_spec_'kafka-then-s3_spec'__logstash-input-kafka-then-s3 - 2016.05.01 at 17h 34m 49s.xml">
-      <configuration name="Run spec 'kafka-then-s3_spec': logstash-input-kafka-then-s3" configurationId="RSpecRunConfigurationType" />
-    </history-entry>
-    <history-entry file="Run_spec_'kafka-then-s3_spec'__logstash-input-kafka-then-s3 - 2016.05.01 at 17h 36m 13s.xml">
-      <configuration name="Run spec 'kafka-then-s3_spec': logstash-input-kafka-then-s3" configurationId="RSpecRunConfigurationType" />
-    </history-entry>
-    <history-entry file="Run_spec_'kafka-then-s3_spec'__logstash-input-kafka-then-s3 - 2016.05.01 at 17h 36m 34s.xml">
-      <configuration name="Run spec 'kafka-then-s3_spec': logstash-input-kafka-then-s3" configurationId="RSpecRunConfigurationType" />
-    </history-entry>
-    <history-entry file="Run_spec_'kafka-then-s3_spec'__logstash-input-kafka-then-s3 - 2016.05.01 at 17h 44m 07s.xml">
-      <configuration name="Run spec 'kafka-then-s3_spec': logstash-input-kafka-then-s3" configurationId="RSpecRunConfigurationType" />
-    </history-entry>
-    <history-entry file="Run_spec_'kafka-then-s3_spec'__logstash-input-kafka-then-s3 - 2016.05.01 at 17h 45m 30s.xml">
-      <configuration name="Run spec 'kafka-then-s3_spec': logstash-input-kafka-then-s3" configurationId="RSpecRunConfigurationType" />
-    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86275000" />
+    <option name="totallyTimeSpent" value="88433000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -576,17 +575,17 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1900" height="839" extended-state="6" />
+    <frame x="-8" y="-8" width="1416" height="849" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23695652" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32153392" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32986626" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.198125" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4694168" sideWeight="0.5106101" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32859176" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32819074" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32986626" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3541963" sideWeight="0.49684542" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34922862" sideWeight="0.49684542" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4670407" sideWeight="0.48938993" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -639,12 +638,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="ruby-line">
           <url>file://$PROJECT_DIR$/lib/logstash/inputs/kafka_then_s3.rb</url>
-          <line>172</line>
+          <line>176</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="ruby-line">
           <url>file://$PROJECT_DIR$/lib/logstash/inputs/kafka_then_s3.rb</url>
-          <line>147</line>
+          <line>151</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="ruby-line">
@@ -654,17 +653,17 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="ruby-line">
           <url>file://$PROJECT_DIR$/lib/logstash/inputs/kafka_then_s3.rb</url>
-          <line>187</line>
+          <line>191</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="ruby-line">
           <url>file://$PROJECT_DIR$/lib/logstash/inputs/kafka_then_s3.rb</url>
-          <line>192</line>
+          <line>196</line>
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="ruby-line">
           <url>file://$PROJECT_DIR$/lib/logstash/inputs/kafka_then_s3.rb</url>
-          <line>390</line>
+          <line>394</line>
           <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
@@ -1012,16 +1011,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/inputs/kafka_then_s3_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="56" column="16" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="16" />
+        <state relative-caret-position="544">
+          <caret line="32" column="108" selection-start-line="32" selection-start-column="108" selection-end-line="32" selection-end-column="108" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/logstash/inputs/kafka_then_s3.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="15" column="123" selection-start-line="15" selection-start-column="116" selection-end-line="15" selection-end-column="123" />
+        <state relative-caret-position="102">
+          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
           <folding />
         </state>
       </provider>
