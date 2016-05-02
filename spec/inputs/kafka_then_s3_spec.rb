@@ -30,13 +30,13 @@ class LogStash::Inputs::TestKafkaThenS3 < LogStash::Inputs::KafkaThenS3
 
   class TestKafkaGroup < Kafka::Group
     def run(a_num_threads, a_queue)
-      blah = TestMessageAndMetadata.new(@topic, 0, nil, "{\"context\":{},\"filename\":\"simpleTextFile.txt\"}", 1)
+      blah = TestMessageAndMetadata.new(@topic, 0, nil, "{\"context\":{},\"s3_key\":\"simpleTextFile.txt\"}", 1)
       a_queue << blah
     end
   end
 class TestKafkaGZGroup < Kafka::Group
     def run(a_num_threads, a_queue)
-      blah = TestMessageAndMetadata.new(@topic, 0, nil, "{\"context\":{},\"filename\":\"simpleTextFile.gz\"}", 1)
+      blah = TestMessageAndMetadata.new(@topic, 0, nil, "{\"context\":{},\"s3_key\":\"simpleTextFile.gz\"}", 1)
       a_queue << blah
     end
   end
@@ -50,7 +50,7 @@ class TestKafkaGZGroup < Kafka::Group
 
   class TestInfiniteKafkaGroup < Kafka::Group
     def run(a_num_threads, a_queue)
-      blah = TestMessageAndMetadata.new(@topic, 0, nil,  "{\"context\":{},\"filename\":\"kafka.message\"}", 1)
+      blah = TestMessageAndMetadata.new(@topic, 0, nil,  "{\"context\":{},\"s3_key\":\"kafka.message\"}", 1)
       Thread.new do
         while true
           a_queue << blah

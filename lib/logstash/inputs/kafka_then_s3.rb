@@ -291,20 +291,23 @@ class LogStash::Inputs::KafkaThenS3 < LogStash::Inputs::Base
     # So all IO stuff: decompression, reading need to be done in the actual
     # input and send as bytes to the codecs.
     read_file(filename) do |line, isEof|
-
       if stop?
         @logger.warn("Logstash S3 input, stop reading in the middle of the file, we will read it again when logstash is started")
         return false
       end
       @codec.decode(line) do |event|
-
         decorate(event)
         if @isEOF
           @logger.debug("adding isEOF to logstash event")
-          event["isEof"] = isEof
+          event["isEof"] = false
         end
         event["context"] = origEvent['context']
         queue << event
+        # if @isEOF && isEof
+        #   @logger.debug("Sending EOF to logstash event")
+        #   event["isEof"] = isEof
+        #   queue << event
+        # end
       end
     end
 
