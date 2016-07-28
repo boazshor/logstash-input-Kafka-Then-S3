@@ -246,7 +246,7 @@ class LogStash::Inputs::KafkaThenS3 < LogStash::Inputs::Base
         #                     'key' => message_and_metadata.key,
         #                     'messge' => message_and_metadata.message}
         msg = JSON.parse(event["message"])
-        @logger.debug('the msg from kafka',:message => "#{event['message']}")
+        @logger.debug("the msg from kafka',:message => #{event['message']}")
 
         process_files(msg, output_queue)
       end
@@ -292,6 +292,7 @@ class LogStash::Inputs::KafkaThenS3 < LogStash::Inputs::Base
     # Currently codecs operates on bytes instead of stream.
     # So all IO stuff: decompression, reading need to be done in the actual
     # input and send as bytes to the codecs.
+    lineNumber = 0
     read_file(filename) do |line, isEof|
       if stop?
         @logger.warn("Logstash S3 input, stop reading in the middle of the file, we will read it again when logstash is started")
@@ -302,6 +303,8 @@ class LogStash::Inputs::KafkaThenS3 < LogStash::Inputs::Base
         if @isEOF
           @logger.debug("adding isEOF to logstash event")
           event["isEof"] = false
+          event["lineNumber"] = lineNumber
+          lineNumber = lineNumber + 1
         end
         event["context"] = origEvent['context']
         queue << event
@@ -333,7 +336,7 @@ class LogStash::Inputs::KafkaThenS3 < LogStash::Inputs::Base
 
 
   def read_plain_file(filename, block)
-    @logger.debug( "in read plain file , the fileName is : "+filename + "\n")
+    @logger.debug( 'in read plain file , the fileName is : ',:filename => filename )
     File.open(filename, 'rb') do |file|
       file.each {|line| block.call(line,file.eof?)}
     end
@@ -346,7 +349,7 @@ class LogStash::Inputs::KafkaThenS3 < LogStash::Inputs::Base
         decoder.each_line { |line| block.call(line, decoder.eof?  ) }
       end
     rescue Zlib::Error, Zlib::GzipFile::Error => e
-      @logger.error("Gzip codec: We cannot uncompress the gzip file", :filename => filename)
+      @logger.error('Gzip codec: We cannot uncompress the gzip file', :filename => filename)
       raise e
     end
   end
@@ -399,8 +402,6 @@ class LogStash::Inputs::KafkaThenS3 < LogStash::Inputs::Base
   # @param [String] The Temporary filename to stream to.
   # @return [Boolean] True if the file was completely downloaded
   def download_remote_file(remote_object, local_filename)
-    # cont = remote_object.read
-    #" the content is  : " + cont.to_s + "\n"))
     completed = false
     @logger.warn("S3 input: Download remote file", :remote_key => remote_object.key, :local_filename => local_filename)
     File.open(local_filename, 'wb') do |s3file|

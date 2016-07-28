@@ -148,8 +148,10 @@ class TestKafkaGZGroup < Kafka::Group
       logstash_queue = Queue.new
       kafkaThenS3.run logstash_queue
       e = logstash_queue.pop
+
       expect(e['context']).to be_truthy
       expect(e['isEof']).to eq(false)
+      expect(e['lineNumber']).to eq(0)
       insist { e['message'] } == simpleTextFileContent
       # no metadata by default
       insist { e['kafka'] } == nil
@@ -176,6 +178,7 @@ class TestKafkaGZGroup < Kafka::Group
       # expect(e['isEof']).to eq(true)
 
       insist {e['message'] } == "simple file from s3\n"
+      insist{e['lineNumber']} == 0
       # no metadata by default
       insist { e['kafka'] } == nil
     end
