@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4ab8eaab-27d1-43c4-bd2f-129ddbbf17b0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/inputs/kafka_then_s3_spec.rb" afterPath="$PROJECT_DIR$/spec/inputs/kafka_then_s3_spec.rb" />
     </list>
     <ignored path="logstash-input-kafka-then-s3.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -681,7 +680,7 @@
       <workItem from="1461688775895" duration="42261000" />
       <workItem from="1462211661960" duration="5219000" />
       <workItem from="1466927702431" duration="9732000" />
-      <workItem from="1474189093930" duration="944000" />
+      <workItem from="1474189093930" duration="953000" />
     </task>
     <task id="LOCAL-00001" summary="add tests">
       <created>1461151855474</created>
@@ -697,7 +696,14 @@
       <option name="project" value="LOCAL" />
       <updated>1474196408235</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add tests">
+      <created>1474196542839</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1474196542839</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -733,7 +739,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106577000" />
+    <option name="totallyTimeSpent" value="106586000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
